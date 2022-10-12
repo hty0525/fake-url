@@ -1,20 +1,14 @@
 import IUrl from "../../type/urlType";
 
 export const Url = ({ url }: { url: IUrl }) => {
-  const { realUrl, fakeUrl, visitCount } = url;
+  const { realUrl, fakeUrl } = url;
   return (
-    <li className="border px-5 py-7 rounded-xl w-full flex flex-col gap-y-3 overflow-hidden mb-5">
-      <div>
-        <p>Fake Url</p>
-        <p className="break-all">{fakeUrl}</p>
+    <li className="border-2 border-black p-6 rounded-[5px] w-full flex flex-col gap-y-4 overflow-hidden mb-5">
+      <div className="py-2 px-3 bg-[#e9ecef] border-1 border-[#ced4da] rounded-[0.25rem]">
+        <p className="break-all">단축 주소 : {realUrl}</p>
       </div>
-      <div>
-        <p>Real Url</p>
-        <p className="break-all">{realUrl}</p>
-      </div>
-      <div>
-        <p>VisitCount</p>
-        <p>{visitCount}</p>
+      <div className="py-2 px-3 bg-[#e9ecef] border-1 border-[#ced4da] rounded-[0.25rem]">
+        <p className="break-all">주소 : {fakeUrl}</p>
       </div>
     </li>
   );

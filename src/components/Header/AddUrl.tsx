@@ -17,16 +17,6 @@ export const AddUrl = () => {
 
   const handleUrlAdd = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (
-      !(
-        (!url.includes("https://", 0) || !url.includes("http://", 0)) &&
-        url[0] === "h"
-      )
-    ) {
-      alert("주소는 https:// 혹은 http://로 시작해야합니다!");
-      setUrl("");
-      return;
-    }
     const { status } = await postUrl(url);
     if (status === 201) {
       alert("정상적으로 등록되었습니다!");

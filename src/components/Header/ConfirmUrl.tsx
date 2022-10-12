@@ -9,7 +9,6 @@ export const ConfirmUrl = () => {
     e.preventDefault();
     const _url = url.split("/").slice(-1);
     const { data } = await confirmUrlInfo(_url[0]);
-    console.log(data);
   };
 
   const handleUrlOncahgne = ({

@@ -7,7 +7,7 @@ export const UrlList = () => {
   const { data } = useGetUrlQuery();
   const urlList = data && data.data;
   return (
-    <ul className="overflow-y-scroll h-full">
+    <ul>
       {urlList?.map((url: IUrl) => (
         <Url key={url.fakeUrl} url={url} />
       ))}
